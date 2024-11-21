@@ -20,9 +20,9 @@
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": false,
+  "isDisabled": true,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": false,
   "key": "d8e19s7by2",
   "leftColumn": 1,
   "minWidth": 120,
