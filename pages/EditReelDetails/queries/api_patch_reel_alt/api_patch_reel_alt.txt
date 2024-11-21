@@ -1,0 +1,5 @@
+{
+	"zhHk": {{input_alt_text_tc.text}},
+  "zhCn": {{input_alt_text_sc.text}},
+  "en": {{input_alt_text_en.text}}
+}

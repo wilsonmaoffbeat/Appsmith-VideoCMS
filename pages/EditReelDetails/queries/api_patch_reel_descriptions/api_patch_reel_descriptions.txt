@@ -1,0 +1,5 @@
+{
+	"en": {{input_description_en.text}},
+	"zhCn": {{input_description_sc.text}},
+	"zhHk": {{input_description_tc.text}}
+}

@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6720a55c4e2d48287e4a3a67_b8260bef-21d1-4c72-bf47-f25833ccc8e3",
+  "id": "EditReelDetails_js_change_reel_status",
+  "unpublishedCollection": {
+    "name": "js_change_reel_status",
+    "pageId": "EditReelDetails",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

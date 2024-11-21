@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6720a55c4e2d48287e4a3a67_e9094e88-62ba-43ea-95f2-8c1e139aea78",
+  "id": "ViewReelDetails_js_get_all_products",
+  "unpublishedCollection": {
+    "name": "js_get_all_products",
+    "pageId": "ViewReelDetails",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

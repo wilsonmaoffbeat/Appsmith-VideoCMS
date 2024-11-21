@@ -1,0 +1,3 @@
+{
+	"tagIds": {{mutliSelect_video_tags.selectedOptionValues}}
+}

@@ -1,0 +1,4 @@
+{
+	"fileName": {{this.params.fileName}},
+	"mime": {{this.params.mime}}
+}

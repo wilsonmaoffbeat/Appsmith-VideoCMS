@@ -1,0 +1,4 @@
+{
+  "lang": {{this.params.lang}},
+  "key": {{this.params.key}}
+}

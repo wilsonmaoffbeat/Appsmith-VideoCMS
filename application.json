@@ -1,0 +1,56 @@
+{
+  "appIsExample": false,
+  "applicationDetail": {
+    "appPositioning": {
+      "type": "FIXED"
+    },
+    "navigationSetting": {},
+    "themeSetting": {
+      "appMaxWidth": "LARGE",
+      "density": 1.0,
+      "sizing": 1.0
+    }
+  },
+  "applicationVersion": 2,
+  "collapseInvisibleWidgets": true,
+  "color": "#ECECEC",
+  "evaluationVersion": 2,
+  "icon": "headphones",
+  "pages": [
+    {
+      "id": "Login Test",
+      "isDefault": false
+    },
+    {
+      "id": "ReelList",
+      "isDefault": false
+    },
+    {
+      "id": "ViewReelDetails",
+      "isDefault": false
+    },
+    {
+      "id": "UploadReel",
+      "isDefault": false
+    },
+    {
+      "id": "EditReelDetails",
+      "isDefault": false
+    },
+    {
+      "id": "Login",
+      "isDefault": true
+    }
+  ],
+  "unpublishedApplicationDetail": {
+    "appPositioning": {
+      "type": "FIXED"
+    },
+    "navigationSetting": {},
+    "themeSetting": {
+      "appMaxWidth": "LARGE",
+      "density": 1.0,
+      "sizing": 1.0
+    }
+  }
+}

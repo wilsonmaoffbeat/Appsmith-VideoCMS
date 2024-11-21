@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6720a55c4e2d48287e4a3a67_6d906e4d-4641-40ed-8368-3f617200e980",
+  "id": "EditReelDetails_uploadFileToS3",
+  "unpublishedCollection": {
+    "name": "uploadFileToS3",
+    "pageId": "EditReelDetails",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}
