@@ -2,14 +2,10 @@ export default {
 	async login (email, password) {
 		console.log('running login....');
 		const domainMapping = new Map([
-			['development', 'everuts.link'],
-			['test', 'everutm.link'],
-			['production', 'everuts.com'],
+			['production', 'everuts.com']
 		])
 		const keyMapping = new Map([
-			['development', { keyName: 'GOdZg5z6', keyValue: 'NuclBOp07h7eD8RD5dqYC5rkEpbJViXb' }],
-			['test', { keyName: 'vRtBgYjg', keyValue: 'ffb94vTOicyZ1WaAeu2qghyucIjWBSkH' }],
-			['production', { keyName: 'LAmXHcaY', keyValue: 'ZMqtpiyWfPOMBhPLwk3R1necmnmEkyls' }],
+			['production', { keyName: 'LAmXHcaY', keyValue: 'ZMqtpiyWfPOMBhPLwk3R1necmnmEkyls' }]
 		])
 		
 		const env = selectEnv.selectedOptionValue;
@@ -41,9 +37,11 @@ export default {
 			return it.ok ? it.json() : Promise.reject(it.statusText)
 		})
 		console.log('storing store....');
+		/*
 		storeValue('everutsAdminToken', data.token, true);
 		storeValue('everutsRefreshToken', data.refreshToken, true);
 		storeValue('everutsAdminApiRoot', `https://admin-api.${domainMapping.get(env)}`, true);
+		*/
 		
 		//login
 		storeValue("testAdminToken", data.token, true);
