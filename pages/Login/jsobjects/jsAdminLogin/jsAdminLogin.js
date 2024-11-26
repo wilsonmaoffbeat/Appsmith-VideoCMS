@@ -1,5 +1,6 @@
 export default {
 	async login (email, password) {
+		console.log('running login....');
 		const domainMapping = new Map([
 			['development', 'everuts.link'],
 			['test', 'everutm.link'],
@@ -21,6 +22,8 @@ export default {
 		const payload = [client, keyName, email, password, timestamp].join("");
 		const signature = CryptoJS.HmacSHA256(payload, keyValue).toString();
 
+		console.log('Path:'+`https://admin-api.${domainMapping.get(env)}/internal-identities/auth/password`);
+		
 		const data = await fetch(`https://admin-api.${domainMapping.get(env)}/internal-identities/auth/password`, {
 			method: "POST",
 			body: JSON.stringify({
@@ -37,7 +40,7 @@ export default {
 		}).then((it) => {
 			return it.ok ? it.json() : Promise.reject(it.statusText)
 		})
-
+		console.log('storing store....');
 		storeValue('everutsAdminToken', data.token, true);
 		storeValue('everutsRefreshToken', data.refreshToken, true);
 		storeValue('everutsAdminApiRoot', `https://admin-api.${domainMapping.get(env)}`, true);
