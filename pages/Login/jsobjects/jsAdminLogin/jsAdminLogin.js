@@ -12,6 +12,7 @@ export default {
 		const client = "app"
 
 		const timestamp = new Date().getTime() / 1000 | 0;
+		console.log('Timestamp:'+timestamp);
 		const keyName = keyMapping.get(env).keyName;
 		const keyValue = keyMapping.get(env).keyValue;
 
