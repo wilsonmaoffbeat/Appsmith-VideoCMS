@@ -20,7 +20,7 @@
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": true,
+  "isDisabled": false,
   "isLoading": false,
   "isVisible": false,
   "key": "d8e19s7by2",

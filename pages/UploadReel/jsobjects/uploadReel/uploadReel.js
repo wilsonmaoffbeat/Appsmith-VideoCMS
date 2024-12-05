@@ -2,6 +2,7 @@ export default {
 	async submit()
 	{
 		let canUpload = true;
+		/* removed, due to bad conditioning
 		if(appsmith.store.videoTc === '' || appsmith.store.videoSc === '' || appsmith.store.videoEn === '')
 		{
 			canUpload = false;
@@ -12,11 +13,15 @@ export default {
 			canUpload = false;
 			showAlert('Please load all thumbnails!', 'error');
 		}
-		if(input_store_id.text === '' || 
-			 input_title_tc.text === '' || input_title_sc.text === '' || input_title_en.text === '' ||
-			 input_description_tc.text === '' || input_description_sc.text === '' || input_description_en.text === '' ||
-			 input_alt_text_tc.text === '' || input_alt_text_sc.text === '' || input_alt_text_en.text === ''||
-			 mutli_select_video_tags.selectedOptionValues.length < 1 || input_skuIds.text === ''
+		*/
+		if(
+			appsmith.store.videoTc === '' || appsmith.store.videoSc === '' || appsmith.store.videoEn === '' ||
+			appsmith.store.thumbnailEn === '' || appsmith.store.thumbnailTc === '' || appsmith.store.thumbnailSc === '' ||
+			input_store_id.text === '' || 
+			input_title_tc.text === '' || input_title_sc.text === '' || input_title_en.text === '' ||
+			input_description_tc.text === '' || input_description_sc.text === '' || input_description_en.text === '' ||
+			input_alt_text_tc.text === '' || input_alt_text_sc.text === '' || input_alt_text_en.text === ''||
+			mutli_select_video_tags.selectedOptionValues.length < 1 || input_skuIds.text === ''
 			)
 		{
 			canUpload = false;
@@ -25,7 +30,6 @@ export default {
 		if(canUpload === true)
 		{
 			await this.uploadReel();
-			navigateTo('ReelList');
 		}
 	},
 	async uploadReel () {
@@ -60,14 +64,25 @@ export default {
 			"skuIds": input_skuIds.text.split(/\r?\n/).filter((it) => !!it)
 		}
 
-		await postReel.run({data: data});
-
+		try
+		{
+			await postReel.run({data: data});
+			showAlert("Reel is created!", "success");
+			navigateTo('ReelList');
+		}
+		catch (error)
+		{
+			showAlert('Error '+postReel.data.statusCode+":"+postReel.data.message,'error');
+		}
+		
+		/*
 		if (!postReel.responseMeta.isExecutionSuccess) {
 			showAlert("Reel cannot be created: " + postReel.data, "error");
 		}
 		else {
 			showAlert("Reel is created!", "success");
 		}
+		*/
 
 		// clear store	
 		removeValue("videoTc");

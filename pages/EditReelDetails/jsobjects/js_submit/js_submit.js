@@ -13,11 +13,27 @@ export default {
 		{
 			const skuIdArray = input_skuIds.text.split('\n').filter(sku => sku.trim() !== '');
 			storeValue("skuIdArray", skuIdArray);
-			await api_patch_reel_alt.run();
-			await api_patch_reel_titles.run();
-			await api_patch_reel_descriptions.run();
-			await api_patch_reel_tags.run();
-			await api_patch_reel_products.run();
+			try
+			{
+				await api_patch_reel_alt.run();
+				await api_patch_reel_titles.run();
+				await api_patch_reel_descriptions.run();
+				await api_patch_reel_tags.run();
+				await api_patch_reel_products.run();
+			}
+			catch (error)
+			{
+				if(api_patch_reel_alt.responseMeta.isExecutionSuccess === false)
+					showAlert('Error '+api_patch_reel_alt.data.statusCode+":"+api_patch_reel_alt.data.message,'error');
+				if(api_patch_reel_titles.responseMeta.isExecutionSuccess === false)
+					showAlert('Error '+api_patch_reel_titles.data.statusCode+":"+api_patch_reel_titles.data.message,'error');
+				if(api_patch_reel_descriptions.responseMeta.isExecutionSuccess === false)
+					showAlert('Error '+api_patch_reel_descriptions.data.statusCode+":"+api_patch_reel_descriptions.data.message,'error');
+				if(api_patch_reel_tags.responseMeta.isExecutionSuccess === false)
+					showAlert('Error '+api_patch_reel_tags.data.statusCode+":"+api_patch_reel_tags.data.message,'error');
+				if(api_patch_reel_products.responseMeta.isExecutionSuccess === false)
+					showAlert('Error '+api_patch_reel_products.data.statusCode+":"+api_patch_reel_products.data.message,'error');
+			}
 			
 			//update thumbnail
 			if(file_picker_thumbnail_en.files.length > 0 && appsmith.store.thumbnailEn != '')
