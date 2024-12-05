@@ -22,7 +22,7 @@
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": false,
+  "isVisible": true,
   "key": "d8e19s7by2",
   "leftColumn": 1,
   "minWidth": 120,
