@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 33,
+  "bottomRow": 31,
   "boxShadow": "none",
   "defaultText": "",
   "dynamicBindingPathList": [
@@ -38,7 +38,7 @@
   "mobileRightColumn": 21,
   "mobileTopRow": 12,
   "needsErrorInfo": false,
-  "originalBottomRow": 31,
+  "originalBottomRow": 33,
   "originalTopRow": 21,
   "parentColumnSpace": 17.74749755859375,
   "parentId": "i9tbvnvr77",

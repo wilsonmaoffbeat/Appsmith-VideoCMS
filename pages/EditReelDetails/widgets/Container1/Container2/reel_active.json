@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 66,
+  "bottomRow": 62,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -33,8 +33,8 @@
   "mobileRightColumn": 17,
   "mobileTopRow": 36,
   "needsErrorInfo": false,
-  "originalBottomRow": 62,
-  "originalTopRow": 58,
+  "originalBottomRow": 66,
+  "originalTopRow": 62,
   "overflow": "NONE",
   "parentColumnSpace": 17.74749755859375,
   "parentId": "mzmycybdzd",
@@ -46,7 +46,7 @@
   "text": "Video is <i>{{api_get_reel_admin.data.isActive === true ? 'Active' : 'Inactive'}}</i>!",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 62,
+  "topRow": 58,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

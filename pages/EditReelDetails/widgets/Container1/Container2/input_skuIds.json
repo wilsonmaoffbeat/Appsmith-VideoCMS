@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 26,
+  "bottomRow": 22,
   "boxShadow": "none",
   "defaultText": "{{api_get_products_with_pageSize.data.items.map(item => item.skuId).join('\\n')}}",
   "dynamicBindingPathList": [
@@ -41,7 +41,7 @@
   "mobileRightColumn": 21,
   "mobileTopRow": 12,
   "needsErrorInfo": false,
-  "originalBottomRow": 22,
+  "originalBottomRow": 26,
   "originalTopRow": 12,
   "parentColumnSpace": 17.74749755859375,
   "parentId": "mzmycybdzd",

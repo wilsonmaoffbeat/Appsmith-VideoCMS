@@ -72,7 +72,8 @@ export default {
 		}
 		catch (error)
 		{
-			showAlert('Error '+postReel.data.statusCode+":"+postReel.data.message,'error');
+			if(!postReel.responseMeta.isExecutionSuccess)
+				showAlert('Error '+postReel.data.statusCode+":"+postReel.data.message,'error');
 		}
 		
 		/*

@@ -1,16 +1,31 @@
 export default {
 	async uploadFile(file, fieldName) {
-		await postAssets.run({fileName: file.name, mime: ""});
-
+		try
+		{
+			await postAssets.run({fileName: file.name, mime: ""});
+		}
+		catch (error)
+		{
+			if (!postAssets.responseMeta.isExecutionSuccess)
+				showAlert("Back End Error: "+postAssets.responseMeta.statusCode, "error");
+		}
 		if (!postAssets.responseMeta.isExecutionSuccess) {
 			showAlert("File cannot be uploaded.", "error");
 		}
 
 		const { key, presignedUrl } = postAssets.data;
 
-		await putFileToS3.run({url: presignedUrl, file: file.data});
-
-		if (!postAssets.responseMeta.isExecutionSuccess) {
+		try
+		{
+			await putFileToS3.run({url: presignedUrl, file: file.data});
+		}
+		catch (error)
+		{
+			if (!putFileToS3.responseMeta.isExecutionSuccess)
+				showAlert("Back End Error: "+putFileToS3.responseMeta.statusCode, "error");
+		}
+			
+		if (!putFileToS3.responseMeta.isExecutionSuccess) {
 			showAlert("File cannot be uploaded.", "error");
 			this.displayUploadText(fieldName, false);
 		} else {

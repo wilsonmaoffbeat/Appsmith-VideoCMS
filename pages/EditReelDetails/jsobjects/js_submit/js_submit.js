@@ -59,14 +59,15 @@ export default {
 		if(isError === true)
 		{
 			showAlert('Error! Please check if all info are entered correctly!', 'error');
+			button_submit.setDisabled(false);
 		}
 		else
 		{
 			await api_get_reel_admin.run();
 			await api_get_products_public.run();
+			button_submit.setDisabled(false);
 			showAlert('Video updated!','success');
 			navigateTo('ViewReelDetails', {"id":api_get_reel_admin.data.id}, 'SAME_WINDOW');
 		}
-		button_submit.setDisabled(false);
 	}
 }
